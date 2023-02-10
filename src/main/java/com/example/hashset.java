@@ -13,14 +13,16 @@ class BookDetails {
         this.authorName = authorName;
         this.sno = sno;
     }
+
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return sno;
     }
 }
 
 public class hashset {
     public static final Logger Log = Logger.getLogger("InfoLogging");
+
     public static void main(String[] args) {
         HashSet<BookDetails> set = new HashSet<BookDetails>();
         BookDetails bk1 = new BookDetails("OOps in Java", "Agarwal", 3201);
@@ -29,7 +31,7 @@ public class hashset {
 
         set.add(bk1);
         set.add(bk2);
-        set.add(bk3);       
+        set.add(bk3);
 
         for (BookDetails s : set) {
             Log.info(s.bookName + " " + s.authorName + " " + s.sno);
@@ -41,13 +43,8 @@ public class hashset {
         }
         Log.info("" + set.size());
         Log.info("" + bk1.equals(bk2));
-        Log.info(""+bk1.hashCode());
+        Log.info("" + bk1.hashCode());
 
-
-
-        Log.info("" + set.removeAll(set));
-        Log.info("" + set.size());
-        
     }
 
 }
