@@ -15,7 +15,8 @@ public class treeset {
     names.add("Jerry");
     names.add("Bala");
 
-    Log.info("TreeSet" + names);  
+    String tree ="TreeSet" + names;
+    Log.info(tree);  
     TreeSet<String> sortedNames = new TreeSet<>(new Comparator<String>() {
       @Override
       public int compare(String s1, String s2) {
@@ -23,15 +24,22 @@ public class treeset {
       }
     });
     sortedNames.addAll(names);
-    Log.info("Sorted TreeSet(descending order): " + sortedNames);  
-    Log.info("Contains Jeeva" + names.contains("Jeeva"));
+    String stree = "Sorted TreeSet(descending order): " + sortedNames;
+    Log.info(stree);  
+    stree ="Contains Jeeva " + names.contains("Jeeva");
+    Log.info(stree);
     names.remove("Jeeva");
-    Log.info("TreeSet after removing Jim: " + names);  
-    Log.info("First element: " + names.first()); 
-    Log.info("Last element: " + names.last());  
-    Log.info("Size: " + names.size());  
+    stree = "TreeSet after removing Jeeva: " + names;
+    Log.info(stree);  
+    stree = "First element: " + names.first();
+    Log.info(stree); 
+    stree = "Last element: " + names.last();
+    Log.info(stree);  
+    String size = "Size: " + names.size();
+    Log.info(size);  
     names.clear();
-    Log.info("Is the TreeSet empty? " + names.isEmpty());  
+    size = "Size: " + names.size();
+    Log.info("After clear(): "+size);
   }
 }
 
