@@ -41,7 +41,8 @@ public class hashset {
 
         Log.info("" + set.remove(bk3));
         for (BookDetails s : set) {
-            Log.info(s.bookName + " " + s.authorName + " " + s.sno);
+            print =s.bookName + " " + s.authorName + " " + s.sno;
+            Log.info(print);
         }
         Log.info("" +Integer.toString(set.size()) );
         Log.info("" + bk1.equals(bk2));
