@@ -32,18 +32,20 @@ public class hashset {
         set.add(bk1);
         set.add(bk2);
         set.add(bk3);
+        String print;
 
         for (BookDetails s : set) {
-            Log.info(s.bookName + " " + s.authorName + " " + s.sno);
+            print =s.bookName + " " + s.authorName + " " + s.sno;
+            Log.info(print);
         }
 
         Log.info("" + set.remove(bk3));
         for (BookDetails s : set) {
             Log.info(s.bookName + " " + s.authorName + " " + s.sno);
         }
-        Log.info("" + set.size());
+        Log.info("" +Integer.toString(set.size()) );
         Log.info("" + bk1.equals(bk2));
-        Log.info("" + bk1.hashCode());
+        Log.info(Integer.toString(bk1.hashCode()));
 
     }
 
