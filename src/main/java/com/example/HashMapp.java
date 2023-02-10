@@ -14,7 +14,8 @@ public class HashMapp{
         hmap.put("emp091","Asif");
         String hash = ""+hmap;
         Log.info(hash);
-        Log.info("Size: "+hmap.size());
+        String size = "Size: "+hmap.size();
+        Log.info(size);
         String key = ""+hmap.keySet();
         Log.info(key);
         String val = ""+hmap.values();
