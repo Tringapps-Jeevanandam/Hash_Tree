@@ -44,9 +44,12 @@ public class hashset {
             print =s.bookName + " " + s.authorName + " " + s.sno;
             Log.info(print);
         }
-        Log.info("" +Integer.toString(set.size()) );
-        Log.info("" + bk1.equals(bk2));
-        Log.info(Integer.toString(bk1.hashCode()));
+        String size = ""+set.size();
+        Log.info(size);
+        String s1 = ""+bk2.equals(bk3);
+        Log.info(s1);
+        String hc = ""+bk1.hashCode();
+        Log.info(hc);
 
     }
 
