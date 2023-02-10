@@ -1,45 +1,52 @@
 package com.example;
 
-import java.util.TreeSet;
+import java.util.HashSet;
 import java.util.logging.Logger;
-import java.util.Comparator;
 
-public class treeset {
-    public static final Logger Log = Logger.getLogger("InfoLogging");
-  public static void main(String[] args) {
-    TreeSet<String> names = new TreeSet<>();
+class BookDetails {
+    String bookName;
+    String authorName;
+    int sno;
 
-    names.add("Vivin");
-    names.add("Arun");
-    names.add("Jeeva");
-    names.add("Jerry");
-    names.add("Bala");
+    BookDetails(String bookName, String authorName, int sno) {
+        this.bookName = bookName;
+        this.authorName = authorName;
+        this.sno = sno;
+    }
 
-    String tree ="TreeSet" + names;
-    Log.info(tree);  
-    TreeSet<String> sortedNames = new TreeSet<>(new Comparator<String>() {
-      @Override
-      public int compare(String s1, String s2) {
-        return s2.compareTo(s1);
-      }
-    });
-    sortedNames.addAll(names);
-    String stree = "Sorted TreeSet(descending order): " + sortedNames;
-    Log.info(stree);  
-    stree ="Contains Jeeva " + names.contains("Jeeva");
-    Log.info(stree);
-    names.remove("Jeeva");
-    stree = "TreeSet after removing Jeeva: " + names;
-    Log.info(stree);  
-    stree = "First element: " + names.first();
-    Log.info(stree); 
-    stree = "Last element: " + names.last();
-    Log.info(stree);  
-    String size = "Size: " + names.size();
-    Log.info(size);  
-    names.clear();
-    size = "Size: " + names.size();
-    Log.info("After clear(): "+size);
-  }
+    @Override
+    public int hashCode() {
+        return sno;
+    }
 }
 
+public class hashset {
+    public static final Logger Log = Logger.getLogger("InfoLogging");
+
+    public static void main(String[] args) {
+        HashSet<BookDetails> set = new HashSet<BookDetails>();
+        BookDetails bk1 = new BookDetails("OOps in Java", "Agarwal", 3201);
+        BookDetails bk3 = new BookDetails("python", "Jones", 2021);
+        BookDetails bk2 = new BookDetails("App Development", "vishwa", 4321);
+
+        set.add(bk1);
+        set.add(bk2);
+        set.add(bk3);
+        String print;
+
+        for (BookDetails s : set) {
+            print =s.bookName + " " + s.authorName + " " + s.sno;
+            Log.info(print);
+        }
+
+        Log.info("" + set.remove(bk3));
+        for (BookDetails s : set) {
+            Log.info(s.bookName + " " + s.authorName + " " + s.sno);
+        }
+        Log.info("" +Integer.toString(set.size()) );
+        Log.info("" + bk1.equals(bk2));
+        Log.info(Integer.toString(bk1.hashCode()));
+
+    }
+
+}
