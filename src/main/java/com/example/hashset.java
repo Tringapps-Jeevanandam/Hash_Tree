@@ -20,7 +20,7 @@ class BookDetails {
     }
 }
 
-public class hashset {
+public class HashSet {
     public static final Logger Log = Logger.getLogger("InfoLogging");
 
     public static void main(String[] args) {
@@ -38,8 +38,8 @@ public class hashset {
             print =s.bookName + " " + s.authorName + " " + s.sno;
             Log.info(print);
         }
-
-        Log.info("" + set.remove(bk3));
+        String res = "" + set.remove(bk3);
+        Log.info(res);
         for (BookDetails s : set) {
             print =s.bookName + " " + s.authorName + " " + s.sno;
             Log.info(print);
